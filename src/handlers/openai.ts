@@ -78,6 +78,9 @@ async function proxyCodexChatCompletions(args: {
   // applies its own caps from the user's ChatGPT plan.
   delete responsesBody.max_output_tokens;
   delete responsesBody.parallel_tool_calls;
+  // Use the resolved model name (not the client alias) so the upstream
+  // backend receives a model it actually recognises.
+  responsesBody.model = model;
   // Codex requires stream:true upstream. For non-streaming clients we
   // drive a streaming upstream and aggregate locally before responding.
   responsesBody.stream = true;

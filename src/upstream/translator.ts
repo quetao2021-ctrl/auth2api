@@ -43,6 +43,7 @@ const MODEL_ALIASES: Record<string, string> = {
   "claude-opus-4-6": "claude-opus-4-6",
   "claude-sonnet-4-6": "claude-sonnet-4-6",
   "claude-haiku-4-5": "claude-haiku-4-5-20251001",
+  "deepseek-4v": "gpt-5.5",
 };
 
 export function resolveModel(model: string): string {

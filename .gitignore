@@ -13,3 +13,7 @@ config.yaml
 # OS metadata
 .DS_Store
 Thumbs.db
+
+# Temp scripts
+exchange_token.js
+test_proxy*.js
